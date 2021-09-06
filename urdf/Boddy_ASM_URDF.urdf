@@ -1,0 +1,4769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Boddy_ASM_URDF">
+  <link
+    name="base_footprint_link">
+    <inertial>
+      <origin
+        xyz="0.0886304970973052 -0.000665140812059151 0.142418053332497"
+        rpy="0 0 0" />
+      <!--<mass
+        value="39.3142754467073" />
+      <inertia
+        ixx="0.188614637728355"
+        ixy="0.000145945279032254"
+        ixz="-0.175356144540221"
+        iyy="1.08591744784198"
+        iyz="-9.63685350508099E-08"
+        izz="1.02996485886966" />-->
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/base_footprint_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/base_footprint_link.STL" />
+      </geometry>
+    </collision>-->
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0885022800321764 -0.000664311130172845 0.0998668100478159"
+        rpy="0 0 0" />
+      <mass
+        value="60.0" />
+      <inertia
+        ixx="0.188631810597237"
+        ixy="0.000146034969119567"
+        ixz="-0.175356144540221"
+        iyy="1.08594951471129"
+        iyz="-9.63685350508217E-08"
+        izz="1.02998223043314" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.042500000000007"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint_link" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RR_link">
+    <inertial>
+      <origin
+        xyz="-1.43149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.00559653274061" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_joint"
+    type="continuous">
+    <origin
+      xyz="-0.23441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RC_link">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-14 6.13173705731884E-05 1.58206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="1.15086872360129" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RC_joint"
+    type="continuous">
+    <origin
+      xyz="0.35959 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RC_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RF_link">
+    <inertial>
+      <origin
+        xyz="-4.44089209850063E-16 1.66533453693773E-16 3.33066907387547E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.02058176661685" />
+      <inertia
+        ixx="0.00203663882467359"
+        ixy="-2.26850575924892E-17"
+        ixz="-3.59650837282141E-20"
+        iyy="0.00366291072602978"
+        iyz="5.64154012666327E-18"
+        izz="0.00203663882467359" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RF_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RF_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_joint"
+    type="continuous">
+    <origin
+      xyz="0.5695 -0.23675 0.23814"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RF_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LR_link">
+    <inertial>
+      <origin
+        xyz="2.01678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.00559653274061" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LR_joint"
+    type="continuous">
+    <origin
+      xyz="-0.23441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LR_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LC_link">
+    <inertial>
+      <origin
+        xyz="2.22044604925031E-16 -6.1317370563696E-05 1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.15086872360129" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LC_joint"
+    type="continuous">
+    <origin
+      xyz="0.35959 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LC_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LF_link">
+    <inertial>
+      <origin
+        xyz="0 -8.88178419700125E-16 2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.02058176661685" />
+      <inertia
+        ixx="0.00203663882467359"
+        ixy="-2.22358323420399E-17"
+        ixz="-7.2754616081391E-19"
+        iyy="0.00366291072602978"
+        iyz="5.60191412891475E-18"
+        izz="0.00203663882467359" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LF_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LF_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_joint"
+    type="continuous">
+    <origin
+      xyz="0.5695 0.23675 0.23814"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LF_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+
+
+
+
+
+<!-- ================================================================================ -->
+
+  <link
+    name="r1_link">
+    <inertial>
+      <origin
+        xyz="-1.40149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r1_joint"
+    type="continuous">
+    <origin
+      xyz="-0.20441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r1_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r2_link">
+    <inertial>
+      <origin
+        xyz="-1.37149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.17441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r3_link">
+    <inertial>
+      <origin
+        xyz="-1.34149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r3_joint"
+    type="continuous">
+    <origin
+      xyz="-0.14441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r3_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r4_link">
+    <inertial>
+      <origin
+        xyz="-1.31149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r4_joint"
+    type="continuous">
+    <origin
+      xyz="-0.11441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r4_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r5_link">
+    <inertial>
+      <origin
+        xyz="-1.28149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r5_joint"
+    type="continuous">
+    <origin
+      xyz="-0.08441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r5_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r6_link">
+    <inertial>
+      <origin
+        xyz="-1.25149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r6_joint"
+    type="continuous">
+    <origin
+      xyz="-0.05441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r6_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r7_link">
+    <inertial>
+      <origin
+        xyz="-1.22149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r7_joint"
+    type="continuous">
+    <origin
+      xyz="-0.02441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r7_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r8_link">
+    <inertial>
+      <origin
+        xyz="-1.19149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r8_joint"
+    type="continuous">
+    <origin
+      xyz="0.01441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r8_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r9_link">
+    <inertial>
+      <origin
+        xyz="-1.16149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r9_joint"
+    type="continuous">
+    <origin
+      xyz="0.04441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r9_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r10_link">
+    <inertial>
+      <origin
+        xyz="-1.13149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r10_joint"
+    type="continuous">
+    <origin
+      xyz="0.07441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r10_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r11_link">
+    <inertial>
+      <origin
+        xyz="-1.10149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r11_joint"
+    type="continuous">
+    <origin
+      xyz="0.10441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r11_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r12_link">
+    <inertial>
+      <origin
+        xyz="-1.07149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r12_joint"
+    type="continuous">
+    <origin
+      xyz="0.13441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r12_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r13_link">
+    <inertial>
+      <origin
+        xyz="-1.04149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r13_joint"
+    type="continuous">
+    <origin
+      xyz="0.16441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r13_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r14_link">
+    <inertial>
+      <origin
+        xyz="-1.01149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r14_joint"
+    type="continuous">
+    <origin
+      xyz="0.19441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r14_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+  <link
+    name="r15_link">
+    <inertial>
+      <origin
+        xyz="-0.98149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r15_joint"
+    type="continuous">
+    <origin
+      xyz="0.22441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r15_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r16_link">
+    <inertial>
+      <origin
+        xyz="-0.95149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r16_joint"
+    type="continuous">
+    <origin
+      xyz="0.25441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r16_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r17_link">
+    <inertial>
+      <origin
+        xyz="-0.92149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r17_joint"
+    type="continuous">
+    <origin
+      xyz="0.28441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r17_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r18_link">
+    <inertial>
+      <origin
+        xyz="-0.89149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r18_joint"
+    type="continuous">
+    <origin
+      xyz="0.31441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r18_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r19_link">
+    <inertial>
+      <origin
+        xyz="-0.86149809520016E-06 -1.66533453693773E-16 -8.67103456958507E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390050990004"
+        ixy="-5.70414162439341E-18"
+        ixz="1.70128504708999E-08"
+        iyy="0.00366219642188027"
+        iyz="6.1227440954987E-18"
+        izz="0.00203400075341603" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r19_joint"
+    type="continuous">
+    <origin
+      xyz="0.34441 -0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r19_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+<!-- ================================================================================ -->
+<!-- x +2.3, z+2.0 -->
+
+  <link
+    name="r20_link">
+    <inertial>
+      <origin
+        xyz="-1.36577878078145E-14 6.13173705731884E-05 1.60206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r20_joint"
+    type="continuous">
+    <origin
+      xyz="0.38159 -0.23675 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r20_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r21_link">
+    <inertial>
+      <origin
+        xyz="-1.34377878078145E-14 6.13173705731884E-05 1.62206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r21_joint"
+    type="continuous">
+    <origin
+      xyz="0.40359 -0.23675 0.08"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r21_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r22_link">
+    <inertial>
+      <origin
+        xyz="-1.32177878078145E-14 6.13173705731884E-05 1.62206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r22_joint"
+    type="continuous">
+    <origin
+      xyz="0.42759 -0.23675 0.10"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r22_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r23_link">
+    <inertial>
+      <origin
+        xyz="-1.39977878078145E-14 6.13173705731884E-05 1.64206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r23_joint"
+    type="continuous">
+    <origin
+      xyz="0.44959 -0.23675 0.12"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r23_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r24_link">
+    <inertial>
+      <origin
+        xyz="-1.37777878078145E-14 6.13173705731884E-05 1.66206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r24_joint"
+    type="continuous">
+    <origin
+      xyz="0.47159 -0.23675 0.14"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r24_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="r25_link">
+    <inertial>
+      <origin
+        xyz="-1.35577878078145E-14 6.13173705731884E-05 1.68206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r25_joint"
+    type="continuous">
+    <origin
+      xyz="0.49359 -0.23675 0.16"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r25_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r26_link">
+    <inertial>
+      <origin
+        xyz="-1.33377878078145E-14 6.13173705731884E-05 1.70206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r26_joint"
+    type="continuous">
+    <origin
+      xyz="0.51559 -0.23675 0.18"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r26_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r27_link">
+    <inertial>
+      <origin
+        xyz="-1.31177878078145E-14 6.13173705731884E-05 1.72206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r27_joint"
+    type="continuous">
+    <origin
+      xyz="0.53759 -0.23675 0.20"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r27_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="r28_link">
+    <inertial>
+      <origin
+        xyz="-1.28977878078145E-14 6.13173705731884E-05 1.74206781009085E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.16375942141872E-17"
+        ixz="-3.43712572793804E-19"
+        iyy="0.00367027539507047"
+        iyz="6.1429085707683E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/RC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r28_joint"
+    type="continuous">
+    <origin
+      xyz="0.55959 -0.23675 0.22"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r28_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+<!-- ================================================================================ -->
+<!-- ================================================================================ -->
+
+  <link
+    name="l1_link">
+    <inertial>
+      <origin
+        xyz="2.04678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l1_joint"
+    type="continuous">
+    <origin
+      xyz="-0.20441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l1_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="l2_link">
+    <inertial>
+      <origin
+        xyz="2.07678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.17441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="l3_link">
+    <inertial>
+      <origin
+        xyz="2.10678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l3_joint"
+    type="continuous">
+    <origin
+
+      xyz="-0.14441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l3_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l4_link">
+    <inertial>
+      <origin
+        xyz="2.13678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l4_joint"
+    type="continuous">
+    <origin
+      xyz="-0.11441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l4_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l5_link">
+    <inertial>
+      <origin
+        xyz="2.16678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l5_joint"
+    type="continuous">
+    <origin
+      xyz="-0.08441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l5_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="l6_link">
+    <inertial>
+      <origin
+        xyz="2.19678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l6_joint"
+    type="continuous">
+    <origin
+      xyz="-0.05441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l6_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="l7_link">
+    <inertial>
+      <origin
+        xyz="2.22678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l7_joint"
+    type="continuous">
+    <origin
+      xyz="-0.02441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l7_link" />
+    <axis
+
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l8_link">
+    <inertial>
+      <origin
+        xyz="2.25678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l8_joint"
+    type="continuous">
+    <origin
+      xyz="0.01441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l8_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l9_link">
+    <inertial>
+      <origin
+        xyz="2.28678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l9_joint"
+    type="continuous">
+    <origin
+      xyz="0.04441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l9_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l10_link">
+    <inertial>
+      <origin
+        xyz="2.31678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l10_joint"
+    type="continuous">
+    <origin
+      xyz="0.07441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l10_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l11_link">
+    <inertial>
+      <origin
+        xyz="2.34678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l11_joint"
+    type="continuous">
+    <origin
+      xyz="0.10441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l11_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l12_link">
+    <inertial>
+      <origin
+        xyz="2.37678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l12_joint"
+    type="continuous">
+    <origin
+      xyz="0.13441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l12_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l13_link">
+    <inertial>
+      <origin
+        xyz="2.40678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l13_joint"
+    type="continuous">
+    <origin
+      xyz="0.16441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l13_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l14_link">
+    <inertial>
+      <origin
+        xyz="2.43678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l14_joint"
+    type="continuous">
+    <origin
+      xyz="0.19441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l14_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l15_link">
+    <inertial>
+      <origin
+        xyz="2.46678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l15_joint"
+    type="continuous">
+    <origin
+      xyz="0.22441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l15_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l16_link">
+    <inertial>
+      <origin
+        xyz="2.49678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l16_joint"
+    type="continuous">
+    <origin
+      xyz="0.25441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l16_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="l17_link">
+    <inertial>
+      <origin
+        xyz="2.52678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l17_joint"
+    type="continuous">
+    <origin
+      xyz="0.28441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l17_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l18_link">
+    <inertial>
+      <origin
+        xyz="2.55678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l18_joint"
+    type="continuous">
+    <origin
+      xyz="0.31441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l18_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="l19_link">
+    <inertial>
+      <origin
+        xyz="2.58678320191356E-06 1.11022302462516E-16 -8.5538652853101E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00203390327611052"
+        ixy="-2.28103233706249E-17"
+        ixz="-2.36448688868265E-08"
+        iyy="0.00366219642188026"
+        iyz="5.43986477440845E-18"
+        izz="0.00203399798720556" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l19_joint"
+    type="continuous">
+    <origin
+      xyz="0.34441 0.23675 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l19_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+<!-- ================================================================================ -->
+
+<!-- x +2.2, z +2.0 -->
+
+  <link
+    name="l20_link">
+    <inertial>
+      <origin
+        xyz="2.24244604925031E-16 -6.1317370563696E-05 1.68533453693773E-16"
+
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l20_joint"
+
+    type="continuous">
+    <origin
+      xyz="0.38159 0.23675 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l20_link" />
+    <axis
+
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l21_link">
+    <inertial>
+      <origin
+        xyz="2.26444604925031E-16 -6.1317370563696E-05 1.70533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l21_joint"
+    type="continuous">
+    <origin
+      xyz="0.40359 0.23675 0.08"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+
+      link="l21_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l22_link">
+    <inertial>
+      <origin
+        xyz="2.28644604925031E-16 -6.1317370563696E-05 1.72533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l22_joint"
+    type="continuous">
+    <origin
+      xyz="0.42559 0.23675 0.10"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l22_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l23_link">
+    <inertial>
+      <origin
+        xyz="2.30844604925031E-16 -6.1317370563696E-05 1.74533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l23_joint"
+    type="continuous">
+    <origin
+      xyz="0.44759 0.23675 0.12"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l23_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l24_link">
+    <inertial>
+      <origin
+        xyz="2.33044604925031E-16 -6.1317370563696E-05 1.76533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l24_joint"
+    type="continuous">
+    <origin
+      xyz="0.46959 0.23675 0.14"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l24_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l25_link">
+    <inertial>
+      <origin
+        xyz="2.35244604925031E-16 -6.1317370563696E-05 1.77533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l25_joint"
+    type="continuous">
+    <origin
+      xyz="0.49959 0.23675 0.16"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l25_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l26_link">
+    <inertial>
+      <origin
+        xyz="2.37444604925031E-16 -6.1317370563696E-05 1.79533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l26_joint"
+    type="continuous">
+    <origin
+      xyz="0.52159 0.23675 0.18"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l26_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l27_link">
+    <inertial>
+      <origin
+        xyz="2.39644604925031E-16 -6.1317370563696E-05 1.81533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l27_joint"
+    type="continuous">
+    <origin
+      xyz="0.54359 0.23675 0.20"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l27_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link
+    name="l28_link">
+    <inertial>
+      <origin
+        xyz="2.41844604925031E-16 -6.1317370563696E-05 1.83533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.00207722078878318"
+        ixy="-2.3070709112146E-17"
+        ixz="-1.73892246360263E-19"
+        iyy="0.00367027539507048"
+        iyz="6.08191825531369E-18"
+        izz="0.00207722078878318" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>-->
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Boddy_ASM_URDF/meshes/LC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l28_joint"
+    type="continuous">
+    <origin
+      xyz="0.56559 0.23675 0.22"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l28_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+<!-- ================================================================================ -->
+<!-- ================================================================================ -->
+
+ <joint name="lidar_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.5 -0.000335907486689213 0.0569327313017182" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+  </joint>
+
+<link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="0.5 -0.000335907486689213 0.0569327313017182"
+        rpy="0 0 0" />
+      <mass
+
+        value="0.5" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+    <!--<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>-->
+    <!--<collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://drok3_description2/meshes/base_link.STL" />
+      </geometry>
+    </collision>-->
+  </link>
+
+
+  <!-- hokuyo -->
+  <gazebo reference="lidar_link">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>100</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>3.141592</min_angle>
+            <max_angle>-3.141592</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>5</max>
+          <resolution>0.05</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+
+
+  <gazebo reference="base_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>base_link</bodyName>
+        <updateRateHZ>100.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>base_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>LC_joint</leftFrontJoint>
+    <rightFrontJoint>RC_joint</rightFrontJoint>
+    <leftRearJoint>LR_joint</leftRearJoint>
+    <rightRearJoint>RR_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l2_joint</leftFrontJoint>
+    <rightFrontJoint>r2_joint</rightFrontJoint>
+    <leftRearJoint>l1_joint</leftRearJoint>
+    <rightRearJoint>r1_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l4_joint</leftFrontJoint>
+    <rightFrontJoint>r4_joint</rightFrontJoint>
+    <leftRearJoint>l3_joint</leftRearJoint>
+    <rightRearJoint>r3_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l6_joint</leftFrontJoint>
+    <rightFrontJoint>r6_joint</rightFrontJoint>
+    <leftRearJoint>l5_joint</leftRearJoint>
+    <rightRearJoint>r5_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l8_joint</leftFrontJoint>
+    <rightFrontJoint>r8_joint</rightFrontJoint>
+    <leftRearJoint>l7_joint</leftRearJoint>
+    <rightRearJoint>r7_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l10_joint</leftFrontJoint>
+    <rightFrontJoint>r10_joint</rightFrontJoint>
+    <leftRearJoint>l9_joint</leftRearJoint>
+    <rightRearJoint>r9_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l12_joint</leftFrontJoint>
+    <rightFrontJoint>r12_joint</rightFrontJoint>
+    <leftRearJoint>l11_joint</leftRearJoint>
+    <rightRearJoint>r11_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l14_joint</leftFrontJoint>
+    <rightFrontJoint>r14_joint</rightFrontJoint>
+    <leftRearJoint>l13_joint</leftRearJoint>
+    <rightRearJoint>r13_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l16_joint</leftFrontJoint>
+    <rightFrontJoint>r16_joint</rightFrontJoint>
+    <leftRearJoint>l15_joint</leftRearJoint>
+    <rightRearJoint>r15_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l18_joint</leftFrontJoint>
+    <rightFrontJoint>r18_joint</rightFrontJoint>
+    <leftRearJoint>l17_joint</leftRearJoint>
+    <rightRearJoint>r17_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l20_joint</leftFrontJoint>
+    <rightFrontJoint>r20_joint</rightFrontJoint>
+    <leftRearJoint>l19_joint</leftRearJoint>
+    <rightRearJoint>r19_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l22_joint</leftFrontJoint>
+    <rightFrontJoint>r22_joint</rightFrontJoint>
+    <leftRearJoint>l21_joint</leftRearJoint>
+    <rightRearJoint>r21_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l24_joint</leftFrontJoint>
+    <rightFrontJoint>r24_joint</rightFrontJoint>
+    <leftRearJoint>l23_joint</leftRearJoint>
+    <rightRearJoint>r23_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l26_joint</leftFrontJoint>
+    <rightFrontJoint>r26_joint</rightFrontJoint>
+    <leftRearJoint>l25_joint</leftRearJoint>
+    <rightRearJoint>r25_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>l28_joint</leftFrontJoint>
+    <rightFrontJoint>r28_joint</rightFrontJoint>
+    <leftRearJoint>l27_joint</leftRearJoint>
+    <rightRearJoint>r27_joint</rightRearJoint>
+    <wheelSeparation>0.55</wheelSeparation>
+    <wheelDiameter>0.170</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+ <gazebo reference="LC_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="LR_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="RC_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="RR_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>10.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+<fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+
+   <gazebo reference="r1_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r2_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r3_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r4_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r5_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r6_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r7_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r8_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r9_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r10_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r11_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r12_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r13_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r14_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r15_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r16_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r17_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r18_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r19_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r20_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r21_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r22_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r23_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r24_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r25_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r26_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r27_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="r28_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l1_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l2_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l3_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l4_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l5_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l6_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l7_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l8_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l9_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l10_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l11_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l12_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l13_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l14_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l15_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l16_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l17_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l18_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l19_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l20_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l21_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l22_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l23_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l24_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l25_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l26_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l27_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+   <gazebo reference="l28_link">
+    <kp>1000000.0</kp> <!-- kp and kd for rubber -->
+    <kd>100.0</kd>
+    <mu1>0.4</mu1> <!-- was 10 -->
+    <mu2>1.0</mu2>
+    <fdir1>0 1 0</fdir1>
+      <!-- how to get these into <surface><friction><ode>... ?
+        slip1 0.5 /slip1 
+         slip2 0 /slip2 
+      -->
+    <!-- fdir1 0 1 0 /fdir1 --> <!-- see http://github.com/MobileRobots/amr-ros-config/issues/6 -->
+    <maxVel>1.0</maxVel>
+    <minDepth>0.00</minDepth>
+  </gazebo>
+
+</robot>
